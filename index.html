@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kouzelný svět</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#6B3FA8">
+<meta name="description" content="Pohádkový učitel pro děti od 4 let: počítání, slabiky, samostatnost.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kouzelný svět">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700;800&display=swap">
+  <script type="module" crossorigin src="./index-BBkJJxlZ.js"></script>
+  <link rel="stylesheet" crossorigin href="./index-FedTdKWI.css">
+<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+<body>
+<div class="app" id="app">
+  <section class="screen" id="s-start">
+    <div class="center">
+      <h1 class="logo">Kouzelný <span>svět</span></h1>
+      <div class="ch-wrap hero-ch" id="start-ch"></div>
+      <button class="big" id="b-start">Začít</button>
+      <p class="note">Zapni zvuk. Postavička mluví česky hlasem zařízení a titulky jsou vždy zapnuté. Rodičovská sekce je pod zámkem vpravo nahoře v domečku.</p>
+    </div>
+  </section>
+
+  <section class="screen" id="s-pick" hidden>
+    <div class="center">
+      <h1 style="font-size:36px;color:var(--plum-d)">Kdo bude tvůj kamarád?</h1>
+      <div class="pick" id="pick"></div>
+      <button class="big" id="b-pick" disabled style="opacity:.4">Jdeme na to!</button>
+    </div>
+  </section>
+
+  <section class="screen" id="s-house" hidden>
+    <div class="topbar">
+      <button class="icon-btn" id="b-friend" aria-label="Změnit kamaráda">⇄</button>
+      <h2 id="house-title">Domeček</h2>
+      <button class="icon-btn" id="b-parent" aria-label="Pro rodiče">🔒</button>
+    </div>
+    <div class="stage"><div class="rooms" id="rooms"></div></div>
+    <div class="dock"><div class="ch-wrap" id="house-ch"></div><div class="bubble" id="house-bubble"></div></div>
+  </section>
+
+  <section class="screen" id="s-lesson" hidden>
+    <div class="topbar">
+      <button class="icon-btn" id="b-home" aria-label="Domů">⌂</button>
+      <h2 id="lesson-title"></h2>
+      <button class="icon-btn" id="b-repeat" aria-label="Zopakuj">↻</button>
+    </div>
+    <div class="stage" id="stage"></div>
+    <div class="dock"><div class="ch-wrap" id="lesson-ch"></div><div class="bubble" id="lesson-bubble"></div></div>
+  </section>
+
+  <section class="screen" id="s-break" hidden>
+    <div class="center">
+      <div class="ch-wrap hero-ch" id="break-ch"></div>
+      <h1 style="font-size:38px;color:var(--plum-d)">Čas na přestávku</h1>
+      <p style="font-size:20px;max-width:460px">Protáhni se jako kočka a běž si chvilku hrát. Domeček na tebe počká.</p>
+      <button class="big soft" id="b-break">Rodič: pokračovat</button>
+    </div>
+  </section>
+
+  <section class="screen" id="s-gate" hidden>
+    <div class="topbar"><button class="icon-btn" id="b-gate-back" aria-label="Zpět">⌂</button><h2>Pro rodiče</h2></div>
+    <div class="center">
+      <p style="font-size:19px;max-width:420px">Zadej číslicemi: <b id="gate-word"></b></p>
+      <div class="disp" id="gate-disp"></div>
+      <div class="err" id="gate-err"></div>
+      <div class="keypad" id="keypad"></div>
+    </div>
+  </section>
+
+  <section class="screen" id="s-parent" hidden>
+    <div class="topbar"><button class="icon-btn" id="b-parent-back" aria-label="Zpět do domečku">⌂</button><h2>Přehled pro rodiče</h2></div>
+    <div class="parent"><div class="wrap" id="parent"></div></div>
+  </section>
+</div>
+</body>
+</html>
